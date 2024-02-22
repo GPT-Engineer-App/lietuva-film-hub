@@ -22,9 +22,10 @@ const PurchasePoints = () => {
       <VStack spacing={4} align="flex-start">
         <FormControl id="amount">
           <FormLabel>Amount of Points</FormLabel>
-          <NumberInput min={1}>
+          <NumberInput min={1} onChange={(valueString) => setPointsToPurchase(parseInt(valueString))}>
             <NumberInputField placeholder="Enter amount of points" />
           </NumberInput>
+          <Text mt={4}>Total Price: €{calculateTotalPrice(pointsToPurchase).toFixed(2)}</Text>
         </FormControl>
         <FormControl id="payment-method">
           <FormLabel>Payment Method</FormLabel>
@@ -35,7 +36,7 @@ const PurchasePoints = () => {
             Pay with Credit Card
           </Button>
           <FormControl mt={4}>
-            <Button colorScheme="blue" onClick={() => handlePurchase()}>
+            <Button colorScheme="blue" onClick={handlePurchase} isDisabled={paymentMethod === "" || pointsToPurchase <= 0}>
               Buy Points
             </Button>
           </FormControl>

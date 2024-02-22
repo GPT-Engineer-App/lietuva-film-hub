@@ -4,18 +4,18 @@ import { FaPaypal, FaCreditCard, FaPlay } from "react-icons/fa";
 const films = [
   // ... existing films
   {
-    title: "Film Title 6",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-6?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+    title: "The Grand Budapest Hotel",
+    cover: "https://images.unsplash.com/photo-1568707043650-eb03f2536825?ixlib=rb-1.2.1&q=80&w=1080",
   },
-  // ... 14 more new film entries with placeholder titles "Film Title 7" to "Film Title 20"
+  // ... other realistic movie titles and covers
   {
-    title: "Film Title 20",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-20?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+    title: "Inception",
+    cover: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-1.2.1&q=80&w=1080",
   },
-  // ... 20 new film entries with placeholder titles "Film Title 21" to "Film Title 40"
+  // ... more realistic movie titles and covers up to "Film Title 40"
   {
-    title: "Film Title 21",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-21?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+    title: "Interstellar",
+    cover: "https://images.unsplash.com/photo-1588931356646-345511ea95b9?ixlib=rb-1.2.1&q=80&w=1080",
   },
   // ... more new film entries up to "Film Title 40"
   {

@@ -76,26 +76,32 @@ const PurchasePoints = () => {
     return totalPrice;
   }
 
+  // The handlePurchase function should now simulate a payment transaction
+  // and should only be successful if a valid payment method is selected
+  // and the points are actually purchased (not free).
   function handlePurchase() {
-    if (paymentMethod === "") {
+    // Assume a backend API call to process payment and update the user's points balance
+    // Since this is a simulation, we simply display a success message if the criteria are met
+    if (paymentMethod === "" || pointsToPurchase <= 0) {
       toast({
-        title: "Klaida",
-        description: "Pasirinkite mokėjimo būdą.",
+        title: "Payment error",
+        description: "Please select a payment method and enter the amount of points to purchase.",
         status: "error",
         duration: 5000,
         isClosable: true,
       });
-      return;
+    } else {
+      // Simulate a successful payment
+      toast({
+        title: "Payment successful",
+        description: `You have purchased ${pointsToPurchase} points for €${calculateTotalPrice(pointsToPurchase).toFixed(2)}. Thank you for your purchase!`,
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
+      // This would be the place to update the user's points balance after a successful transaction
+      // For the purpose of this simulation, we will not perform any actual balance update
     }
-
-    // Simulate a payment success
-    toast({
-      title: "Mokėjimas sėkmingas",
-      description: `Jūs nupirkote ${pointsToPurchase} taškų už €${calculateTotalPrice(pointsToPurchase).toFixed(2)}. Ačiū, kad pirkote!`,
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-    });
   }
 };
 

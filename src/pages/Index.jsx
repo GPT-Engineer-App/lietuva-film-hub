@@ -63,19 +63,7 @@ const films = [
 
 const Index = () => {
   const navigate = useNavigate();
-  const [points, setPoints] = useState(1000);
-  const toast = useToast();
-
-  const handlePurchase = (amount) => {
-    setPoints(points + amount);
-    toast({
-      title: "Taškai nupirkti sėkmingai.",
-      description: `Jūsų taškų likutis: ${points + amount}`,
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    });
-  };
+  const [points, setPoints] = useState(0);
   return (
     <Container maxW="container.xl" bg="brand.900" color="white">
       <Heading as="h1" my={8} color="primary.500">

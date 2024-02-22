@@ -19,6 +19,9 @@ const colors = {
 
 const theme = extendTheme({ colors });
 
+const BASE_URL = "http://85.928.727.2"; // Add base URL variable
+
+// Add React.StrictMode and ChakraProvider components with the theme
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>

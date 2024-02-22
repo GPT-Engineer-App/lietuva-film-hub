@@ -19,10 +19,26 @@ const films = [
     title: "Interstellar",
     cover: "https://images.unsplash.com/photo-1588931356646-345511ea95b9?ixlib=rb-1.2.1&q=80&w=1080",
   },
-  // ... more new film entries up to "Film Title 40"
+  // ... more new film entries up to "Film Title 45"
   {
-    title: "Film Title 40",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-40?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbWovZWlzdHJhaW5pbmclMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+    title: "Film Title 41",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-41?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "Film Title 42",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-42?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "Film Title 43",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-43?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "Film Title 44",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-44?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "Film Title 45",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-45?ixlib=rb-4.0.3&q=80&w=1080",
   },
 ];
 

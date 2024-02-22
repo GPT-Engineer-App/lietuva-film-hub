@@ -95,10 +95,10 @@ const Index = () => {
                 <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
                   Žiūrėti
                 </Button>
-                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} onClick={() => handlePurchase(100)} variant="solid">
+                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} onClick={() => navigate("/purchase-points", { state: { amount: 100 } })} variant="solid">
                   Pirkti taškus
                 </Button>
-                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} onClick={() => handlePurchase(200)} variant="solid">
+                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} onClick={() => navigate("/purchase-points", { state: { amount: 200 } })} variant="solid">
                   Pirkti taškus
                 </Button>
               </HStack>

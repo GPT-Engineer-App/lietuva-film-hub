@@ -33,7 +33,7 @@ const Index = () => {
                 <Button colorScheme="blue" leftIcon={<Icon as={FaPaypal} />} data-email="sender.lithuania@gmail.com">
                   Pirkti taškus
                 </Button>
-                <Button colorScheme="green" leftIcon={<Icon as={FaCreditCard} />}>
+                <Button colorScheme="green" leftIcon={<Icon as={FaCreditCard} />} data-bank="LT727044090101171110">
                   Pirkti taškus
                 </Button>
               </HStack>

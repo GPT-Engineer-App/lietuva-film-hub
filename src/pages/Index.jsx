@@ -4,13 +4,15 @@ import { FaPaypal, FaCreditCard, FaPlay } from "react-icons/fa";
 import { useState } from "react";
 import PointsBalance from "./PointsBalance";
 
+// Adjusting films array to include a points cost for each film
 const films = [
-  // ... existing films
+  // ... existing films with points cost added
   {
     title: "The Grand Budapest Hotel",
     cover: "https://images.unsplash.com/photo-1568707043650-eb03f2536825?ixlib=rb-1.2.1&q=80&w=1080",
+    pointsCost: Math.floor(Math.random() * 15) + 1, // Random cost between 1 and 15
   },
-  // ... other realistic movie titles and covers
+  // ... other realistic movie titles and covers with points cost added
   {
     title: "Inception",
     cover: "https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-1.2.1&q=80&w=1080",
@@ -64,6 +66,9 @@ const films = [
 const Index = () => {
   const navigate = useNavigate();
   const [points, setPoints] = useState(0);
+  const [selectedFilm, setSelectedFilm] = useState(null);
+  const toast = useToast();
+  // Remove the duplicated imports since they have been declared at the top of the file
   return (
     <Container maxW="container.xl" bg="brand.900" color="white">
       <Heading as="h1" my={8} color="primary.500">
@@ -79,10 +84,7 @@ const Index = () => {
                 {film.title}
               </Heading>
               <HStack justify="space-between">
-                <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
-                  Žiūrėti
-                </Button>
-                <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
+                <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid" onClick={() => handleWatchFilm(film, points, setPoints, setSelectedFilm, toast)}>
                   Žiūrėti
                 </Button>
                 <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} onClick={() => navigate("/purchase-points")} variant="solid">
@@ -96,11 +98,41 @@ const Index = () => {
           </Box>
         ))}
       </SimpleGrid>
+      {selectedFilm && (
+        // Simulated modal or similar component to represent watching a film
+        <Box bg="brand.700" p={4} rounded="md" shadow="lg" position="fixed" top="50%" left="50%" transform="translate(-50%, -50%)">
+          <Heading as="h2" size="lg" mb={4}>
+            Watching: {selectedFilm.title}
+          </Heading>
+          {/* Placeholder for video player */}
+          <Box bg="black" height="360px" width="640px"></Box>
+          <Button mt={4} colorScheme="red" onClick={() => setSelectedFilm(null)}>
+            Close
+          </Button>
+        </Box>
+      )}
       <Text textAlign="center" color="gray.400" my={10}>
         Svetainės kūrėjas Tomas Juodiška
       </Text>
     </Container>
   );
 };
+
+// Function to handle watching a film
+function handleWatchFilm(film, points, setPoints, setSelectedFilm, toast) {
+  if (points >= film.pointsCost) {
+    setPoints((prevPoints) => prevPoints - film.pointsCost);
+    setSelectedFilm(film);
+  } else {
+    toast({
+      title: "Not enough points",
+      description: "You do not have enough points to watch this film.",
+      status: "error",
+      duration: 9000,
+      isClosable: true,
+    });
+  }
+  // Pass the state and state setters as arguments to the handleWatchFilm function
+}
 
 export default Index;

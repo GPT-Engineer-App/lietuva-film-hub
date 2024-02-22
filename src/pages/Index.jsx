@@ -1,5 +1,7 @@
-import { Box, Container, Heading, SimpleGrid, Image, Text, Button, VStack, HStack, Icon } from "@chakra-ui/react";
+import { Box, Container, Heading, SimpleGrid, Image, Text, Button, VStack, HStack, Icon, useToast } from "@chakra-ui/react";
 import { FaPaypal, FaCreditCard, FaPlay } from "react-icons/fa";
+import { useState } from "react";
+import PointsBalance from "./PointsBalance";
 
 const films = [
   // ... existing films
@@ -25,11 +27,25 @@ const films = [
 ];
 
 const Index = () => {
+  const [points, setPoints] = useState(1000); // Assuming the user starts with 1000 points
+  const toast = useToast();
+
+  const handlePurchase = (amount) => {
+    setPoints(points + amount);
+    toast({
+      title: "Taškai nupirkti sėkmingai.",
+      description: `Jūsų taškų likutis: ${points + amount}`,
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+  };
   return (
     <Container maxW="container.xl" bg="brand.900" color="white">
       <Heading as="h1" my={8} color="primary.500">
         Žiūrėkite filmus lietuviškai
       </Heading>
+      <PointsBalance balance={points} />
       <SimpleGrid columns={[1, 2, 3]} spacing={10} paddingBottom={10}>
         {films.map((film, index) => (
           <Box key={index} boxShadow="md" borderRadius="lg" overflow="hidden">
@@ -42,10 +58,13 @@ const Index = () => {
                 <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
                   Žiūrėti
                 </Button>
-                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} data-email="sender.lithuania@gmail.com" variant="solid">
+                <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
+                  Žiūrėti
+                </Button>
+                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} onClick={() => handlePurchase(100)} variant="solid">
                   Pirkti taškus
                 </Button>
-                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} data-bank="LT727044090101171110" variant="solid">
+                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} onClick={() => handlePurchase(200)} variant="solid">
                   Pirkti taškus
                 </Button>
               </HStack>

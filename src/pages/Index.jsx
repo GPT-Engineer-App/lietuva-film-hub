@@ -1,4 +1,5 @@
 import { Box, Container, Heading, SimpleGrid, Image, Text, Button, VStack, HStack, Icon, useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { FaPaypal, FaCreditCard, FaPlay } from "react-icons/fa";
 import { useState } from "react";
 import PointsBalance from "./PointsBalance";
@@ -61,7 +62,8 @@ const films = [
 ];
 
 const Index = () => {
-  const [points, setPoints] = useState(1000); // Assuming the user starts with 1000 points
+  const navigate = useNavigate();
+  const [points, setPoints] = useState(1000);
   const toast = useToast();
 
   const handlePurchase = (amount) => {
@@ -95,10 +97,10 @@ const Index = () => {
                 <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
                   Žiūrėti
                 </Button>
-                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} onClick={() => navigate("/purchase-points", { state: { amount: 100 } })} variant="solid">
+                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} onClick={() => navigate("/purchase-points")} variant="solid">
                   Pirkti taškus
                 </Button>
-                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} onClick={() => navigate("/purchase-points", { state: { amount: 200 } })} variant="solid">
+                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} onClick={() => navigate("/purchase-points")} variant="solid">
                   Pirkti taškus
                 </Button>
               </HStack>

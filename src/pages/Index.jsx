@@ -16,11 +16,11 @@ const films = [
 
 const Index = () => {
   return (
-    <Container maxW="container.xl">
-      <Heading as="h1" my={8}>
+    <Container maxW="container.xl" bg="brand.900" color="white">
+      <Heading as="h1" my={8} color="primary.500">
         Žiūrėkite filmus lietuviškai
       </Heading>
-      <SimpleGrid columns={[1, 2, 3]} spacing={10}>
+      <SimpleGrid columns={[1, 2, 3]} spacing={10} paddingBottom={10}>
         {films.map((film, index) => (
           <Box key={index} boxShadow="md" borderRadius="lg" overflow="hidden">
             <Image src={film.cover} alt={film.title} />
@@ -29,11 +29,13 @@ const Index = () => {
                 {film.title}
               </Heading>
               <HStack justify="space-between">
-                <Button leftIcon={<Icon as={FaPlay} />}>Žiūrėti</Button>
-                <Button colorScheme="blue" leftIcon={<Icon as={FaPaypal} />} data-email="sender.lithuania@gmail.com">
+                <Button colorScheme="secondary" leftIcon={<Icon as={FaPlay} />} variant="solid">
+                  Žiūrėti
+                </Button>
+                <Button colorScheme="primary" leftIcon={<Icon as={FaPaypal} />} data-email="sender.lithuania@gmail.com" variant="solid">
                   Pirkti taškus
                 </Button>
-                <Button colorScheme="green" leftIcon={<Icon as={FaCreditCard} />} data-bank="LT727044090101171110">
+                <Button colorScheme="primary" leftIcon={<Icon as={FaCreditCard} />} data-bank="LT727044090101171110" variant="solid">
                   Pirkti taškus
                 </Button>
               </HStack>
@@ -41,7 +43,7 @@ const Index = () => {
           </Box>
         ))}
       </SimpleGrid>
-      <Text textAlign="center" color="gray.600" my={10}>
+      <Text textAlign="center" color="gray.400" my={10}>
         Svetainės kūrėjas Tomas Juodiška
       </Text>
     </Container>

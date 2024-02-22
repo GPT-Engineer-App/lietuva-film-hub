@@ -12,6 +12,16 @@ const films = [
     title: "Film Title 20",
     cover: "https://images.unsplash.com/photo-UNIQUE-ID-20?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
   },
+  // ... 20 new film entries with placeholder titles "Film Title 21" to "Film Title 40"
+  {
+    title: "Film Title 21",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-21?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+  },
+  // ... more new film entries up to "Film Title 40"
+  {
+    title: "Film Title 40",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-40?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbWovZWlzdHJhaW5pbmclMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+  },
 ];
 
 const Index = () => {

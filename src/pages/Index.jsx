@@ -2,16 +2,26 @@ import { Box, Container, Heading, SimpleGrid, Image, Text, Button, VStack, HStac
 import { FaPaypal, FaCreditCard, FaPlay } from "react-icons/fa";
 
 const films = [
-  // Dummy film data - replace with actual data
   {
-    title: "Film Title 1",
-    cover: "https://images.unsplash.com/photo-1485846234645-a62644f84728?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxwb3B1bGFyJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE3MDg2MjA1NzJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+    title: "Didysis Gatsby",
+    cover: "https://images.unsplash.com/photo-1589992896544-246f6ca2df3b?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
   },
   {
-    title: "Film Title 2",
-    cover: "https://images.unsplash.com/photo-1500099817043-86d46000d58f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwyfHxwb3B1bGFyJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE3MDg2MjA1NzJ8MA&ixlib=rb-4.0.3&q=80&w=1080",
+    title: "Paslapčių knyga",
+    cover: "https://images.unsplash.com/photo-1633113087661-7b159c8e6ee0?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwzfHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
   },
-  // Add more films here
+  {
+    title: "Nakties sargyba",
+    cover: "https://images.unsplash.com/photo-1621944174241-7a45d58a3b2a?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw0fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+  },
+  {
+    title: "Vilkų sodas",
+    cover: "https://images.unsplash.com/photo-1603415525373-8fa40e3a5753?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw1fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+  },
+  {
+    title: "Mergina ir drakonas",
+    cover: "https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-4.0.3&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHw2fHxmdWxsJTIwbW92aWUlMjBjb3ZlcnxlbnwwfHx8fDE2NzY5NzAzNzI&q=80&w=1080",
+  },
 ];
 
 const Index = () => {

@@ -20,25 +20,43 @@ const films = [
     cover: "https://images.unsplash.com/photo-1588931356646-345511ea95b9?ixlib=rb-1.2.1&q=80&w=1080",
   },
   // ... more new film entries up to "Film Title 45"
+  // Added new film entries with placeholder images
   {
-    title: "Film Title 41",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-41?ixlib=rb-4.0.3&q=80&w=1080",
+    title: "Karate Kid",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-KARATE?ixlib=rb-4.0.3&q=80&w=1080",
   },
   {
-    title: "Film Title 42",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-42?ixlib=rb-4.0.3&q=80&w=1080",
+    title: "The Maze Runner",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-MAZE?ixlib=rb-4.0.3&q=80&w=1080",
   },
   {
-    title: "Film Title 43",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-43?ixlib=rb-4.0.3&q=80&w=1080",
+    title: "Death App",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-DEATHAPP?ixlib=rb-4.0.3&q=80&w=1080",
   },
   {
-    title: "Film Title 44",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-44?ixlib=rb-4.0.3&q=80&w=1080",
+    title: "The Medallion",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-MEDALLION?ixlib=rb-4.0.3&q=80&w=1080",
   },
   {
-    title: "Film Title 45",
-    cover: "https://images.unsplash.com/photo-UNIQUE-ID-45?ixlib=rb-4.0.3&q=80&w=1080",
+    title: "Blade Runner",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-BLADE?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "Crocodile Dundee",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-CROCODILE?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "Lara Croft: Tomb Raider",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-LARA?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  // Additional movies added at discretion
+  {
+    title: "Space Odyssey",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-SPACE?ixlib=rb-4.0.3&q=80&w=1080",
+  },
+  {
+    title: "The Matrix",
+    cover: "https://images.unsplash.com/photo-UNIQUE-ID-MATRIX?ixlib=rb-4.0.3&q=80&w=1080",
   },
 ];
 

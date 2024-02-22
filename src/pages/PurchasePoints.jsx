@@ -29,17 +29,15 @@ const PurchasePoints = () => {
         </FormControl>
         <FormControl id="payment-method">
           <FormLabel>Payment Method</FormLabel>
-          <Button leftIcon={<FaPaypal />} colorScheme="blue" onClick={() => handlePaymentMethodChange("paypal")}>
+          <Button leftIcon={<FaPaypal />} colorScheme="blue" variant={paymentMethod === "paypal" ? "solid" : "outline"} onClick={() => handlePaymentMethodChange("paypal")} mb={2}>
             Pay with PayPal
           </Button>
-          <Button leftIcon={<FaCreditCard />} colorScheme="green" onClick={() => handlePaymentMethodChange("creditCard")} mt={2}>
+          <Button leftIcon={<FaCreditCard />} colorScheme="green" variant={paymentMethod === "creditCard" ? "solid" : "outline"} onClick={() => handlePaymentMethodChange("creditCard")}>
             Pay with Credit Card
           </Button>
-          <FormControl mt={4}>
-            <Button colorScheme="blue" onClick={handlePurchase} isDisabled={paymentMethod === "" || pointsToPurchase <= 0}>
-              Buy Points
-            </Button>
-          </FormControl>
+          <Button mt={4} colorScheme="blue" onClick={handlePurchase} isDisabled={paymentMethod === "" || pointsToPurchase <= 0}>
+            Buy Points
+          </Button>
           {paymentMethod === "paypal" && <Input placeholder="PayPal Email" mt={2} />}
           {paymentMethod === "creditCard" && (
             <VStack mt={2} spacing={2}>
@@ -67,8 +65,6 @@ const PurchasePoints = () => {
   // and should only be successful if a valid payment method is selected
   // and the points are actually purchased (not free).
   function handlePurchase() {
-    // Assume a backend API call to process payment and update the user's points balance
-    // Since this is a simulation, we simply display a success message if the criteria are met
     if (paymentMethod === "" || pointsToPurchase <= 0) {
       toast({
         title: "Payment error",

@@ -42,28 +42,15 @@ const PurchasePoints = () => {
           </FormControl>
           {paymentMethod === "paypal" && <Input placeholder="PayPal Email" mt={2} />}
           {paymentMethod === "creditCard" && (
-            <>
-              <VStack mt={2} spacing={2}>
-                <Input placeholder="Credit Card Number" />
-                <Input placeholder="Expiration Date" />
-                <Input placeholder="CVC" />
-              </VStack>
-              <Text mt={4}>Total Price: €{calculateTotalPrice(pointsToPurchase).toFixed(2)}</Text>
-            </>
+            <VStack mt={2} spacing={2}>
+              <Input placeholder="Credit Card Number" />
+              <Input placeholder="Expiration Date" />
+              <Input placeholder="CVC" />
+            </VStack>
           )}
+          // Removed the redundant display of Total Price here as it's already displayed above.
         </FormControl>
-        <FormControl id="amount">
-          <FormLabel>Amount of Points</FormLabel>
-          <NumberInput min={1} onChange={(value) => setPointsToPurchase(parseInt(value))}>
-            <NumberInputField placeholder="Enter amount of points" />
-          </NumberInput>
-        </FormControl>
-        // ... rest of the component
-        <FormControl id="purchase">
-          <Button colorScheme="teal" onClick={handlePurchase}>
-            Pirkti taškus
-          </Button>
-        </FormControl>
+        // The redundant 'amount' FormControl has been removed as it was duplicated above. // Removed the redundant 'purchase' FormControl which was not part of the original component design.
       </VStack>
     </Box>
   );
